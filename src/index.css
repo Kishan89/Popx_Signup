@@ -1,0 +1,67 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+  background-color: white; /* पूरे पेज का हल्का भूरा बैकग्राउंड */
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* यह सुनिश्चित करेगा कि पूरा पेज कम से कम 100vh का हो */
+}
+
+/* यह आपकी ऐप को मोबाइल जैसा दिखाएगा */
+.app-container {
+  width: 100%;
+  max-width: 450px; /* मोबाइल की अधिकतम चौड़ाई */
+  min-height: 100px; /* कंटेंट कम होने पर न्यूनतम ऊँचाई */
+  padding-bottom: 20px; /* नीचे कुछ जगह देने के लिए */
+  background-color: #f0f2f5; /* ऐप का बैकग्राउंड सफेद */
+  border: 1px solid #d9dadb; /* हल्का भूरा बॉर्डर */
+  border-radius: 8px; /* हल्के गोल किनारे */
+  overflow: hidden;
+  
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+/* मोबाइल डिवाइस के लिए, कंटेनर पूरी स्क्रीन पर फैल जाएगा */
+@media (max-width: 480px) {
+  .app-container {
+    width: 100%;
+    min-height: 100vh; /* मोबाइल पर पूरी स्क्रीन ऊँचाई */
+    border: none;
+    border-radius: 0;
+  }
+}
